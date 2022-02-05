@@ -1,8 +1,9 @@
+from django.shortcuts import get_object_or_404
 from django.urls import reverse
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 
 from webapp.forms import PollForm
-from webapp.models import Poll
+from webapp.models import Poll, Answer
 
 
 class PollIndexView(ListView):
@@ -17,6 +18,15 @@ class PollIndexView(ListView):
 class PollDetailView(DetailView):
     model = Poll
     template_name = 'polls/view.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        answers = len(Answer.objects.all().filter(poll_id=self.object.pk))
+        if answers:
+            context['counts'] = answers
+        else:
+            context['counts'] = 0
+        return context
 
 
 class PollCreateView(CreateView):

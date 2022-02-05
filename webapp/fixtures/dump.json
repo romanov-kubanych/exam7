@@ -1,0 +1,229 @@
+[
+{
+    "model": "webapp.poll",
+    "pk": 1,
+    "fields": {
+        "created_at": "2022-02-05T06:03:52.013Z",
+        "question": "Опрос 1"
+    }
+},
+{
+    "model": "webapp.poll",
+    "pk": 2,
+    "fields": {
+        "created_at": "2022-02-05T06:03:58.531Z",
+        "question": "Опрос 2"
+    }
+},
+{
+    "model": "webapp.poll",
+    "pk": 3,
+    "fields": {
+        "created_at": "2022-02-05T06:04:06.620Z",
+        "question": "Опрос 3"
+    }
+},
+{
+    "model": "webapp.poll",
+    "pk": 4,
+    "fields": {
+        "created_at": "2022-02-05T06:17:17.573Z",
+        "question": "Опрос 4"
+    }
+},
+{
+    "model": "webapp.poll",
+    "pk": 5,
+    "fields": {
+        "created_at": "2022-02-05T06:17:24.463Z",
+        "question": "Опрос 5"
+    }
+},
+{
+    "model": "webapp.poll",
+    "pk": 6,
+    "fields": {
+        "created_at": "2022-02-05T06:17:31.193Z",
+        "question": "Опрос 6"
+    }
+},
+{
+    "model": "webapp.poll",
+    "pk": 7,
+    "fields": {
+        "created_at": "2022-02-05T06:17:37.123Z",
+        "question": "Опрос 7"
+    }
+},
+{
+    "model": "webapp.poll",
+    "pk": 8,
+    "fields": {
+        "created_at": "2022-02-05T06:53:44.678Z",
+        "question": "Опрос 200"
+    }
+},
+{
+    "model": "webapp.poll",
+    "pk": 9,
+    "fields": {
+        "created_at": "2022-02-05T06:54:10.750Z",
+        "question": "Опрос 200"
+    }
+},
+{
+    "model": "webapp.choice",
+    "pk": 1,
+    "fields": {
+        "option": "Вариант 1",
+        "poll": 1
+    }
+},
+{
+    "model": "webapp.choice",
+    "pk": 2,
+    "fields": {
+        "option": "Вариант 2",
+        "poll": 2
+    }
+},
+{
+    "model": "webapp.choice",
+    "pk": 3,
+    "fields": {
+        "option": "Вариант 3",
+        "poll": 3
+    }
+},
+{
+    "model": "webapp.choice",
+    "pk": 6,
+    "fields": {
+        "option": "Вариант 0",
+        "poll": 9
+    }
+},
+{
+    "model": "webapp.choice",
+    "pk": 7,
+    "fields": {
+        "option": "Вариант1",
+        "poll": 9
+    }
+},
+{
+    "model": "webapp.choice",
+    "pk": 8,
+    "fields": {
+        "option": "Вариант2",
+        "poll": 9
+    }
+},
+{
+    "model": "webapp.choice",
+    "pk": 9,
+    "fields": {
+        "option": "Вариант 3",
+        "poll": 9
+    }
+},
+{
+    "model": "webapp.answer",
+    "pk": 1,
+    "fields": {
+        "created_at": "2022-02-05T10:46:26.406Z",
+        "poll": 9,
+        "option": 8
+    }
+},
+{
+    "model": "webapp.answer",
+    "pk": 2,
+    "fields": {
+        "created_at": "2022-02-05T10:47:42.808Z",
+        "poll": 1,
+        "option": 1
+    }
+},
+{
+    "model": "webapp.answer",
+    "pk": 3,
+    "fields": {
+        "created_at": "2022-02-05T10:50:01.133Z",
+        "poll": 9,
+        "option": 6
+    }
+},
+{
+    "model": "webapp.answer",
+    "pk": 4,
+    "fields": {
+        "created_at": "2022-02-05T10:56:38.342Z",
+        "poll": 9,
+        "option": 7
+    }
+},
+{
+    "model": "webapp.answer",
+    "pk": 5,
+    "fields": {
+        "created_at": "2022-02-05T11:20:12.893Z",
+        "poll": 9,
+        "option": 6
+    }
+},
+{
+    "model": "webapp.answer",
+    "pk": 6,
+    "fields": {
+        "created_at": "2022-02-05T11:32:34.062Z",
+        "poll": 9,
+        "option": 7
+    }
+},
+{
+    "model": "webapp.answer",
+    "pk": 7,
+    "fields": {
+        "created_at": "2022-02-05T11:32:52.806Z",
+        "poll": 9,
+        "option": 7
+    }
+},
+{
+    "model": "webapp.answer",
+    "pk": 8,
+    "fields": {
+        "created_at": "2022-02-05T11:33:36.758Z",
+        "poll": 9,
+        "option": 7
+    }
+},
+{
+    "model": "webapp.answer",
+    "pk": 9,
+    "fields": {
+        "created_at": "2022-02-05T11:46:28.996Z",
+        "poll": 9,
+        "option": 7
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$320000$WjfaeSn5PNGV38sReiHPw2$Znnd4UsI76FQK+lDyaKlcn9+6AYm6ruVlgbMz2ygpCw=",
+        "last_login": "2022-02-05T06:03:35.047Z",
+        "is_superuser": true,
+        "username": "admin",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2022-02-05T06:03:30.994Z",
+        "groups": [],
+        "user_permissions": []
+    }
+}
+]
