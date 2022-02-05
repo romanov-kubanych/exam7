@@ -25,7 +25,7 @@ class Choice(models.Model):
     poll = models.ForeignKey('webapp.Poll',
                              on_delete=models.CASCADE,
                              verbose_name='Опрос',
-                             related_name='poll')
+                             related_name='choices')
 
     def __str__(self):
         return f'{self.id}. {self.option}'

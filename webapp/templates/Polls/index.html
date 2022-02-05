@@ -21,7 +21,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Опрос № {{ poll.id }}</h5>
                             <h6 class="card-subtitle mb-2 text-muted">Название: {{ poll.question }}</h6>
-                            <a href="#" class="card-link">Подробнее...</a>
+                            <a href="{% url 'poll_view' poll.pk %}" class="card-link">Подробнее...</a>
                         </div>
                     </div>
                 </div>

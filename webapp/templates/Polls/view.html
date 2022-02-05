@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Опрос {{ poll.pk }}
+{% endblock %}
+
+{% block nav %}
+     <li class="nav-item">
+        <a class="nav-link" href='#'>Изменить опрос</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link text-danger" href="#">Удалить опрос</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link text-success"  href="#">Создать вариант ответа</a>
+    </li>
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="text-center my-5">
+            <h1 class="text-success"> Просмотр опроса №{{ poll.id }}</h1>
+        </div>
+        <div class="alert alert-success" role="alert">
+            <h6>Опрос №{{ poll.id }}</h6>
+            <h6>Вопрос: {{ poll.question }}</h6>
+        </div>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 justify-content-center">
+            {% for choice in poll.choices.all %}
+                <div class="col my-2">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Вариант № {{ choice.id }}</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Ответ {{ choice.option }}</h6>
+                            <a href="#" class="card-link">Подробнее...</a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
