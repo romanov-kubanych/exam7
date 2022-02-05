@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Опрос {{ poll.pk }}
+{% endblock %}
+
+{% block nav %}
+
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="text-center my-5">
+            <h1 class="text-success"> Опрос №{{ poll.id }}</h1>
+        </div>
+        <div class="">
+            <form method="post">
+            {% csrf_token %}
+            {% if poll.choices.all %}
+                {% for choice in poll.choices.all %}
+                    <div class="form-check">
+                        <input class="form-check-input" value="{{ choice.id }}" type="radio" name="answer">
+                        <label class="form-check-label">
+                            {{ choice.option }}
+                        </label>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <h3 class="text-danger text-center">У этого упроса нет вариантов ответа</h3>
+            {% endif %}
+                <div>
+                    {% if poll.choices.all %}
+                        <input class="btn btn-success w-100 mt-4" type="submit" value="Отправить">
+                    {% else %}
+                        <input class="btn btn-success w-100 mt-4 disabled" type="submit" value="Отправить">
+                    {% endif %}
+                </div>
+                <a class="my-3 btn btn-danger w-100" href="{% url "poll_view" poll.pk %}">Отмена</a>
+            </form>
+        </div>
+    </div>
+{% endblock %}

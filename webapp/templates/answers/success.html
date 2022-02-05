@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Success
+{% endblock %}
+
+{% block nav %}
+
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="text-center my-5">
+            <h1 class="text-success">Опрос пройден, спасибо.</h1>
+        </div>
+        <div>
+            <a href="{% url 'poll_view' poll.pk %}" class="btn btn-warning w-100 my-2 text-danger fs-4">Вернуться к детальному просмотру опроса</a><br>
+            <a href="{% url 'poll_index'%}" class="btn btn-warning w-100 my-2 text-danger fs-4">Вернуться на главную страницу</a><br>
+        </div>
+    </div>
+{% endblock %}

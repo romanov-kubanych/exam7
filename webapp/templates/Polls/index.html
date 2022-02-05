@@ -20,8 +20,9 @@
                     <div class="card h-100">
                         <div class="card-body">
                             <h5 class="card-title">Опрос № {{ poll.id }}</h5>
-                            <h6 class="card-subtitle mb-2 text-muted">Название: {{ poll.question }}</h6>
-                            <a href="{% url 'poll_view' poll.pk %}" class="card-link">Подробнее...</a>
+                            <h6 class="card-subtitle mb-2 text-muted">Вопрос: {{ poll.question }}
+                            <a href="{% url 'answer_index' poll.pk %}" class="btn btn-warning w-100 my-2">Пройти опрос</a><br>
+                            <a href="{% url 'poll_view' poll.pk %}" class="btn btn-success w-100">Подробнее</a>
                         </div>
                     </div>
                 </div>
