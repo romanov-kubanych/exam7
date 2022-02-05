@@ -9,7 +9,7 @@
         <a class="nav-link" href='{% url 'poll_update' poll.pk %}'>Изменить опрос</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link text-danger" href="#">Удалить опрос</a>
+        <a class="nav-link text-danger" href="{% url 'poll_delete' poll.pk %}">Удалить опрос</a>
     </li>
     <li class="nav-item">
         <a class="nav-link text-success"  href="#">Создать вариант ответа</a>
