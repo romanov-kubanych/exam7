@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Создание варианта
+{% endblock %}
+
+{% block nav %}
+
+{% endblock %}
+
+{% block  content %}
+<div class="container">
+        <div class="text-center my-5">
+            <h1 class="text-success">Создание нового варианта</h1>
+        </div>
+        <div>
+            <form method="post">
+                {% include 'partial/form.html' with button_text='Создать' %}
+            </form>
+        </div>
+    </div>
+{% endblock %}

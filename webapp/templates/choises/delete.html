@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Удаление варианта
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <form method="POST">
+            {% csrf_token %}
+            <h2 class="text-success text-center mt-3">Удалить вариант "{{ choice.option }}"</h2>
+            <input class="btn btn-danger w-100 mt-4" type="submit" value="Да">
+            </form>
+        <a class="my-3 btn btn-success w-100" href="{% url "poll_view" choice.poll.pk %}">Нет</a>
+    </div>
+
+{% endblock %}

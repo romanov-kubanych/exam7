@@ -12,7 +12,7 @@
         <a class="nav-link text-danger" href="{% url 'poll_delete' poll.pk %}">Удалить опрос</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link text-success"  href="#">Создать вариант ответа</a>
+        <a class="nav-link text-success"  href="{% url 'choice_create' poll.pk %}">Создать вариант ответа</a>
     </li>
 {% endblock %}
 
@@ -32,7 +32,8 @@
                         <div class="card-body">
                             <h5 class="card-title">Вариант № {{ choice.id }}</h5>
                             <h6 class="card-subtitle mb-2 text-muted">Ответ {{ choice.option }}</h6>
-                            <a href="#" class="card-link">Подробнее...</a>
+                            <a href="{% url 'choice_update' choice.pk %}" class="card-link">Редактировать</a><br>
+                            <a href="{% url 'choice_delete' choice.pk%}" class="card-link">Удалить</a>
                         </div>
                     </div>
                 </div>
