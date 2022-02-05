@@ -26,6 +26,7 @@ class PollDetailView(DetailView):
             context['all_answers'] = all_answers
         else:
             context['all_answers'] = 0
+
         print(context)
         return context
 

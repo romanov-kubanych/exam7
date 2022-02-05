@@ -18,5 +18,8 @@
                 {% include 'partial/form.html' with button_text='Создать' %}
             </form>
         </div>
+        <div class="my-3">
+            <a class="btn btn-danger w-100" href={% url 'poll_index' %}>Отмена</a>
+        </div>
     </div>
 {% endblock %}
