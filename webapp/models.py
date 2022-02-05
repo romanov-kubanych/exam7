@@ -18,3 +18,15 @@ class Poll(BaseModel):
         db_table = 'Pools'
         verbose_name = 'Опрос'
         verbose_name_plural = 'Опросы'
+
+
+class Choice(models.Model):
+    option = models.TextField(max_length=200, verbose_name='Текст варианта')
+
+    def __str__(self):
+        return f'{self.id}. {self.option}'
+
+    class Meta:
+        db_table = 'Choices'
+        verbose_name = 'Вариант ответа'
+        verbose_name_plural = 'Варианты ответа'
