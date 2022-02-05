@@ -21,11 +21,12 @@ class PollDetailView(DetailView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        answers = len(Answer.objects.all().filter(poll_id=self.object.pk))
-        if answers:
-            context['counts'] = answers
+        all_answers = len(Answer.objects.all().filter(poll_id=self.object.pk))
+        if all_answers:
+            context['all_answers'] = all_answers
         else:
-            context['counts'] = 0
+            context['all_answers'] = 0
+        print(context)
         return context
 
 

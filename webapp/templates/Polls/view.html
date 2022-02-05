@@ -24,7 +24,7 @@
         <div class="alert alert-success" role="alert">
             <h6>Опрос №{{ poll.id }}</h6>
             <h6>Вопрос: {{ poll.question }}</h6>
-            <h6>Общее количество ответов: {{ counts }}</h6>
+            <h6>Общее количество ответов: {{ all_answers }}</h6>
         </div>
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 justify-content-center">
             {% for choice in poll.choices.all %}
