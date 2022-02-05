@@ -23,7 +23,7 @@
           <ul class="navbar-nav">
             {% block nav %}
             <li class="nav-item">
-              <a class="nav-link" href='#'>Создать опрос</a>
+              <a class="nav-link" href='{% url 'poll_create' %}'>Создать опрос</a>
             </li>
             {% endblock %}
           </ul>
